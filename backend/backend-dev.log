@@ -1,0 +1,27 @@
+
+> fsd-backend@0.0.1 dev
+> tsx watch src/index.ts
+
+🚀 Server running on http://localhost:3000
+📝 API available at http://localhost:3000/api/todos
+11:05:17 pm [tsx] change in ./src\routes\todoRoutes.ts Restarting...
+c🚀 Server running on http://localhost:3000
+📝 API available at http://localhost:3000/api/todos
+11:05:35 pm [tsx] change in ./src\services\todoService.ts Restarting...
+c🚀 Server running on http://localhost:3000
+📝 API available at http://localhost:3000/api/todos
+11:07:07 pm [tsx] unlink in ./src\services\aiService.ts Restarting...
+c🚀 Server running on http://localhost:3000
+📝 API available at http://localhost:3000/api/todos
+11:19:19 pm [tsx] change in ./src\services\todoService.ts Restarting...
+c🚀 Server running on http://localhost:3000
+📝 API available at http://localhost:3000/api/todos
+11:34:11 pm [tsx] change in ./src\controllers\todoController.ts Restarting...
+c🚀 Server running on http://localhost:3000
+📝 API available at http://localhost:3000/api/todos
+11:35:58 pm [tsx] unlink in ./src\services\todoService.ts Restarting...
+c🚀 Server running on http://localhost:3000
+📝 API available at http://localhost:3000/api/todos
+11:36:03 pm [tsx] change in ./src\services\todoService.ts Restarting...
+c🚀 Server running on http://localhost:3000
+📝 API available at http://localhost:3000/api/todos

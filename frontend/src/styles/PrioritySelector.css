@@ -1,0 +1,68 @@
+.priority-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.priority-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.priority-options {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.priority-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 13px;
+  font-weight: 500;
+  flex: 1;
+  min-width: 100px;
+  justify-content: center;
+}
+
+.priority-btn:hover {
+  border-color: #667eea;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.priority-btn.selected {
+  border-width: 2px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.priority-icon {
+  font-size: 16px;
+}
+
+.priority-name {
+  font-size: 13px;
+}
+
+@media (max-width: 768px) {
+  .priority-options {
+    gap: 6px;
+  }
+
+  .priority-btn {
+    min-width: 80px;
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+}

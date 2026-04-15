@@ -1,0 +1,17 @@
+.todos-page {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.todos-page h1 {
+  text-align: center;
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.todos-page.error {
+  color: #ff6b6b;
+  text-align: center;
+  padding: 2rem;
+}

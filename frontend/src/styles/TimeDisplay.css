@@ -1,0 +1,29 @@
+.time-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+  margin-bottom: 20px;
+}
+
+.current-time {
+  font-size: 24px;
+  font-weight: 600;
+  color: white;
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+  .time-display {
+    padding: 15px;
+  }
+
+  .current-time {
+    font-size: 18px;
+  }
+}

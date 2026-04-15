@@ -1,0 +1,206 @@
+.todo-stats {
+  padding: 1.5rem;
+  background: linear-gradient(135deg, rgba(50, 50, 50, 0.5) 0%, rgba(40, 40, 40, 0.5) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  margin-top: 2rem;
+  backdrop-filter: blur(10px);
+}
+
+.todo-stats.loading,
+.todo-stats.error {
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  font-size: 1rem;
+  color: #aaa;
+}
+
+.todo-stats.error {
+  background-color: rgba(255, 107, 107, 0.1);
+  border-color: rgba(255, 107, 107, 0.3);
+  color: #ff6b6b;
+}
+
+.stats-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Consistency Metrics */
+.consistency-metrics {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.consistency-metrics:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(100, 200, 255, 0.3);
+}
+
+.consistency-metrics h3 {
+  margin: 0 0 1.5rem 0;
+  font-size: 1.2rem;
+  color: #64c8ff;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+}
+
+.metric-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: linear-gradient(135deg, rgba(100, 150, 255, 0.1) 0%, rgba(100, 200, 255, 0.05) 100%);
+  border: 1px solid rgba(100, 200, 255, 0.2);
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.metric-card:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, rgba(100, 150, 255, 0.15) 0%, rgba(100, 200, 255, 0.1) 100%);
+  border-color: rgba(100, 200, 255, 0.4);
+  box-shadow: 0 4px 12px rgba(100, 200, 255, 0.1);
+}
+
+.metric-card.highlight {
+  background: linear-gradient(135deg, rgba(255, 107, 107, 0.15) 0%, rgba(255, 165, 122, 0.1) 100%);
+  border-color: rgba(255, 107, 107, 0.3);
+}
+
+.metric-card.highlight:hover {
+  background: linear-gradient(135deg, rgba(255, 107, 107, 0.2) 0%, rgba(255, 165, 122, 0.15) 100%);
+  border-color: rgba(255, 107, 107, 0.5);
+  box-shadow: 0 4px 12px rgba(255, 107, 107, 0.15);
+}
+
+.metric-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #aaa;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.5rem;
+}
+
+.metric-card.highlight .metric-label {
+  color: #ffa07a;
+}
+
+.metric-value {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #64c8ff;
+}
+
+.metric-card.highlight .metric-value {
+  color: #ffa07a;
+}
+
+/* Monthly Chart */
+.monthly-chart {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.monthly-chart:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(100, 200, 255, 0.3);
+}
+
+.monthly-chart h3 {
+  margin: 0 0 1.5rem 0;
+  font-size: 1.2rem;
+  color: #64c8ff;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Recharts customization */
+.recharts-wrapper {
+  position: relative;
+}
+
+.recharts-text {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+    Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  fill: #aaa;
+}
+
+.recharts-legend-item-text {
+  color: #aaa !important;
+}
+
+.recharts-tooltip-wrapper {
+  filter: brightness(1.1);
+}
+
+@media (max-width: 768px) {
+  .todo-stats {
+    padding: 1rem;
+  }
+
+  .consistency-metrics,
+  .monthly-chart {
+    padding: 1rem;
+  }
+
+  .consistency-metrics h3,
+  .monthly-chart h3 {
+    font-size: 1rem;
+  }
+
+  .metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .metric-value {
+    font-size: 1.5rem;
+  }
+}
+
+.recharts-cartesian-axis-tick-value {
+  font-size: 12px;
+  color: #666;
+}
+
+.recharts-legend-wrapper {
+  padding: 15px 0 0 0 !important;
+}
+
+@media (max-width: 768px) {
+  .metrics-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+  }
+
+  .metric-card {
+    padding: 12px;
+  }
+
+  .metric-value {
+    font-size: 24px;
+  }
+
+  .monthly-chart,
+  .consistency-metrics {
+    padding: 15px;
+  }
+}
