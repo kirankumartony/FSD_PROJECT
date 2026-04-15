@@ -37,8 +37,8 @@ export const TodoStats: FC = () => {
       try {
         setLoading(true);
         const [monthlyRes, consistencyRes] = await Promise.all([
-          fetch('http://localhost:3000/api/todos/stats/monthly'),
-          fetch('http://localhost:3000/api/todos/stats/consistency'),
+          fetch(`${import.meta.env.VITE_API_BASE_URL || "http://localhost:3000/api"}/todos/stats/monthly`),
+          fetch(`${import.meta.env.VITE_API_BASE_URL || "http://localhost:3000/api"}/todos/stats/consistency`),
         ]);
 
         if (monthlyRes.ok) {
